@@ -44,3 +44,6 @@ def curry(func: GenericFun) -> GenericFun:
 
 def inverse_dict(d: Dict[Any, Any]) -> Dict[Any, Any]:
     return dict((v, k) for (k, v) in d.items())
+
+def transpose_tuple(l: List[Tuple], t: Callable = tuple) -> Tuple:
+    return t(*zip(*l))
